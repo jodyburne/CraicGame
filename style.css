@@ -1,0 +1,12 @@
+canvas {
+    border: solid 1px deeppink;
+    max-height: 87vh;
+    max-width: 94vw;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
