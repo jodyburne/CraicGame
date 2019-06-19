@@ -1,7 +1,11 @@
+body {
+    margin: 0;
+}
 canvas {
+    box-sizing: border-box;
     border: solid 1px deeppink;
-    max-height: 87vh;
-    max-width: 94vw;
+    max-height: 95vh;
+    max-width: 95vw;
     text-align: center;
     display: block;
     margin: auto;

@@ -1,4 +1,4 @@
-   function drawRb(cxt) {
+   function drawRb(ctx) {
    ctx.fillStyle = "rgb(255,0,0,0.5)"
     ctx.fillRect(200,0,67,1000)
     ctx.fillStyle = "rgb(255,155,0, 0.8)"
