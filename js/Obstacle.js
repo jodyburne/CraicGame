@@ -1,5 +1,6 @@
 class Obstacle {
   constructor() {
+     
     this.radius = 20 + 10 * Math.random();
     this.x = [225, 295, 365, 435, 505, 575][Math.floor(Math.random() * 7)];
     this.y = 1200;

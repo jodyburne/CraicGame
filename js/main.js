@@ -1,8 +1,3 @@
-// TODOs
-
-// Remove the useless obstacles
-
-
 
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
@@ -27,8 +22,8 @@ homepageScreen.src = "images/keane happy.jpg";
 let screen = "home";
 let frame = 0;
 const FRAMES_BETWEEN_MONEY = 121;
-const FRAMES_BETWEEN_OBSTACLE = 79;
-const FRAMES_BETWEEN_SLOWMO = 888;
+const FRAMES_BETWEEN_OBSTACLE = 189;
+const FRAMES_BETWEEN_SLOWMO = 977;
 const FRAMES_BETWEEN_POINT_SPECIAL = 500;
 
 function drawEverything(ctx) {
@@ -61,6 +56,7 @@ function updateEverything() {
     movePointSpecial();
     bg.update();
     leprechaun.update();
+    removeUselessItems()
   }
 }
 
@@ -183,6 +179,30 @@ function movePointSpecial() {
       pointSpecialArr.splice(j, 1);
     }
   }
+}
+
+function removeUselessItems() {
+  if (moneyArr.length > 10)
+  moneyArr.splice(0, 1)
+
+  if (obstacleArr.length > 10)
+  obstacleArr.splice(0, 1)
+  
+
+  if (pointSpecialArr.length > 10)
+  pointSpecialArr.splice(0, 1)
+
+  if (slowMoArr.length > 10)
+  slowMoArr.splice(0, 1)
+
+  // for (let i = 0; i <obstacleArr.length; i++) {
+  //   if (obstacleArr[i]. x === 0 && obstacleArr[i].y === 0) {
+  //     obstacleArr.splice(i, 1)
+  //     console.log('it happened')}
+  //       else{console.log("negative")}
+
+  //   }
+  
 }
 
 function drawScore() {

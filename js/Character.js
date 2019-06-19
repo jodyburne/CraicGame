@@ -2,7 +2,7 @@ class Character {
   constructor() {
     this.radius = 40;
     this.x = CANVAS_WIDTH / 2;
-    this.y = CANVAS_HEIGHT / 4;
+    this.y = CANVAS_HEIGHT / 8;
     this.img = new Image();
     this.img.src = "images/leprechaun.png";
     this.score = 0;

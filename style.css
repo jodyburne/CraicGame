@@ -1,10 +1,15 @@
 body {
     margin: 0;
+    display: flex;
+    flex-direction: wrap;
+    align-content: center;
+    justify-content: center;
+    background-color: rgb(118, 236, 118);
 }
 canvas {
     box-sizing: border-box;
     border: solid 1px deeppink;
-    max-height: 95vh;
+    max-height: 100vh;
     max-width: 95vw;
     text-align: center;
     display: block;
