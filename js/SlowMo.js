@@ -7,6 +7,8 @@ class SlowMo {
         this.vy = 10
         this.img = new Image()
         this.img.src = "images/guinness1.png"
+        this.audioClip = new Audio()
+        this.audioClip.src = "guinness.wav"
     }
 
     draw(ctx) {

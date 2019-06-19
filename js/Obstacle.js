@@ -7,6 +7,8 @@ class Obstacle {
     this.vy = 10;
     this.img = new Image();
     this.img.src = "images/snake-3.png";
+    this.audioClip = new Audio()
+    this.audioClip.src = "game death.wav"
   }
   draw(ctx) {
     ctx.save();

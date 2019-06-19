@@ -19,8 +19,13 @@ gameOverScreen.src = "images/keane1.jpg";
 let homepageScreen = new Image();
 homepageScreen.src = "images/horsehome.png";
 
-// let BG_MUSIC = document.getElementById("audioBG")
-// BG_MUSIC.volume = 0.2
+let bgMusic = new Audio()
+bgMusic.src = "father-ted-my-lovely-horse.mp3"
+bgMusic.volume = 0.05
+bgMusic.load()
+
+
+
 
 let screen = "home";
 let frame = 0;
@@ -28,6 +33,9 @@ const FRAMES_BETWEEN_MONEY = 121;
 const FRAMES_BETWEEN_OBSTACLE = 189;
 const FRAMES_BETWEEN_SLOWMO = 977;
 const FRAMES_BETWEEN_POINT_SPECIAL = 500;
+
+
+
 
 function drawEverything(ctx) {
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
@@ -75,10 +83,11 @@ function animation() {
   }
   if (screen === "over") {
     drawGameOver(ctx);
+    }
     //window.requestAnimationFrame(animation);
-  }
+ 
   window.requestAnimationFrame(animation);
-}
+ }
 animation();
 
 
@@ -145,7 +154,9 @@ function moveObstacle() {
   for (let j = 0; j < obstacleArr.length; j++) {
     obstacleArr[j].update();
     if (checkCollisionDeath(obstacleArr[j])) {
-      // screen = 'over'
+      bgMusic.pause()
+      bgMusic.load()
+      obstacleArr[j].audioClip.play()
       isGameOver = true;
       setTimeout(() => {
         screen = "over";
@@ -161,6 +172,7 @@ function moveSlowMo() {
   for (let j = 0; j < slowMoArr.length; j++) {
     slowMoArr[j].update();
     if (checkCollisionPint(slowMoArr[j])) {
+      slowMoArr[j].audioClip.play()
       slowMoArr.splice(j, 1);
       speedRatio /= 2;
       leprechaun.isDrunk = true;
@@ -179,6 +191,7 @@ function movePointSpecial() {
   for (let j = 0; j < pointSpecialArr.length; j++) {
     pointSpecialArr[j].update();
     if (checkCollisionPointsSpecial(pointSpecialArr[j])) {
+      pointSpecialArr[j].audioClip.play()
       leprechaun.score += 4;
       pointSpecialArr.splice(j, 1);
     }
@@ -241,6 +254,7 @@ function drawHomepage(ctx) {
 function resetGame() {
   if (screen !== "game") {
     screen = "game";
+    bgMusic.play()
     leprechaun = new Character();
     bg = new Background();
     frame = 0;
@@ -302,3 +316,4 @@ canvas.onclick = resetGame
 window.addEventListener('deviceorientation', event => {
   leprechaun.x += event.gamma
 });
+

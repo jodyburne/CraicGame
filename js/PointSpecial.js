@@ -7,6 +7,8 @@ class PointSpecial{
         this.vy = 10
         this.img = new Image()
         this.img.src = "images/clover.png" 
+        this.audioClip = new Audio()
+        this.audioClip.src = "clover.wav"
     }
 
     draw(ctx) {
