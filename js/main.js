@@ -20,9 +20,9 @@ let bg = new Background();
 let leprechaun = new Character();
 
 let gameOverScreen = new Image();
-gameOverScreen.src = "/images/keane1.jpg";
+gameOverScreen.src = "images/keane1.jpg";
 let homepageScreen = new Image();
-homepageScreen.src = "/images/keane happy.jpg";
+homepageScreen.src = "images/keane happy.jpg";
 
 let screen = "home";
 let frame = 0;

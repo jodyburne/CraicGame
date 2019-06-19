@@ -5,7 +5,7 @@ class Obstacle {
     this.y = 1200;
     this.vy = 10;
     this.img = new Image();
-    this.img.src = "/images/snake-3.png";
+    this.img.src = "images/snake-3.png";
   }
   draw(ctx) {
     ctx.save();

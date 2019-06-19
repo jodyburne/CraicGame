@@ -6,7 +6,7 @@ class PointSpecial{
         this.y = 1200
         this.vy = 12
         this.img = new Image()
-        this.img.src = "/images/clover.png" 
+        this.img.src = "images/clover.png" 
     }
 
     draw(ctx) {

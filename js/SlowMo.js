@@ -6,7 +6,7 @@ class SlowMo {
         this.y = 1200
         this.vy = 20
         this.img = new Image()
-        this.img.src = "/images/guinness1.png"
+        this.img.src = "images/guinness1.png"
     }
 
     draw(ctx) {

@@ -6,7 +6,7 @@ class Money {
         this.y = 1200
         this.vy = 8
         this.img = new Image()
-        this.img.src = "/images/coinMaybs1.gif"
+        this.img.src = "images/coinMaybs1.gif"
     }
     draw(ctx) {
         ctx.save()
