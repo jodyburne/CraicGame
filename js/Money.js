@@ -7,6 +7,9 @@ class Money {
         this.vy = 8
         this.img = new Image()
         this.img.src = "images/coinMaybs1.gif"
+        this.audioClip = new Audio()
+        this.audioClip.src = "coin.wav"
+        this.audioClip.volume = 1
     }
     draw(ctx) {
         ctx.save()

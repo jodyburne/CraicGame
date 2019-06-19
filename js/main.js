@@ -17,7 +17,10 @@ let leprechaun = new Character();
 let gameOverScreen = new Image();
 gameOverScreen.src = "images/keane1.jpg";
 let homepageScreen = new Image();
-homepageScreen.src = "images/keane happy.jpg";
+homepageScreen.src = "images/horsehome.png";
+
+// let BG_MUSIC = document.getElementById("audioBG")
+// BG_MUSIC.volume = 0.2
 
 let screen = "home";
 let frame = 0;
@@ -128,6 +131,7 @@ function moveMoney() {
   for (let j = 0; j < moneyArr.length; j++) {
     moneyArr[j].update();
     if (checkCollisionPoints(moneyArr[j])) {
+      moneyArr[j].audioClip.play()
       leprechaun.score += 1;
       moneyArr.splice(j, 1);
     }
