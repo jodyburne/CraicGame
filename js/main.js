@@ -1,7 +1,7 @@
 // TODOs
-// Update the speed for clover and use speedRatio
+
 // Remove the useless obstacles
-// Introduce isGoingUp and isGoingDown for the Character
+
 
 
 const canvas = document.querySelector("canvas");
@@ -28,7 +28,7 @@ let screen = "home";
 let frame = 0;
 const FRAMES_BETWEEN_MONEY = 121;
 const FRAMES_BETWEEN_OBSTACLE = 79;
-const FRAMES_BETWEEN_SLOWMO = 1900;
+const FRAMES_BETWEEN_SLOWMO = 888;
 const FRAMES_BETWEEN_POINT_SPECIAL = 500;
 
 function drawEverything(ctx) {
@@ -240,31 +240,19 @@ document.onkeydown = event => {
 
   if (event.keyCode === 37) {
     leprechaun.isGoingLeft = true;
-    // leprechaun.x -= 50;
-    if (leprechaun.x < 0) {
-      leprechaun.x = 0;
-    }
+    
   }
-  // right
+  
   if (event.keyCode === 39) {
     leprechaun.isGoingRight = true;
-    // leprechaun.x += 50;
-    if (leprechaun.x > 800) {
-      leprechaun.x = 800;
-    }
+    
   }
   if (event.keyCode === 38) {
-    leprechaun.y -= 15;
-  }
-  if (leprechaun.y < 0) {
-    leprechaun.y = 0;
-  }
-  //
+    leprechaun.isGoingUp = true  }
+  
   if (event.keyCode === 40) {
-    leprechaun.y += 100;
-    if (leprechaun.y > 1000) {
-      leprechaun.y = 1000;
-    }
+    leprechaun.isGoingDown = true;
+    
   }
 };
 
@@ -272,16 +260,16 @@ document.onkeyup = event => {
   if (event.keyCode === 37) {
     leprechaun.isGoingLeft = false;
   }
-  // right
   if (event.keyCode === 39) {
     leprechaun.isGoingRight = false;
   }
   if (event.keyCode === 38) {
-    leprechaun.y += 0;
+    leprechaun.isGoingUp = false;
   }
-  //
+  
   if (event.keyCode === 40) {
-    leprechaun.y += 0;
+    leprechaun.isGoingDown = false;
+    ;
   }
 };
 

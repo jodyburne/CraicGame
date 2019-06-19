@@ -4,7 +4,7 @@ class SlowMo {
         this.radius = 30
         this.x = [225, 295, 365, 435, 505, 575][Math.floor(Math.random() * 7)] 
         this.y = 1200
-        this.vy = 20
+        this.vy = 10
         this.img = new Image()
         this.img.src = "images/guinness1.png"
     }

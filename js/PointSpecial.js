@@ -25,13 +25,7 @@ class PointSpecial{
         ctx.restore()
     }
     update() {
-        this.y -= this.vy
-        if (frame % 500 === 0) {
-            this.vy++
-             }
-        if(resetGame) {
-
-            this.vy = 12
-    }
-    }
+       
+ this.y -= speedRatio * this.vy;
+}
 }

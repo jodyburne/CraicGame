@@ -8,6 +8,8 @@ class Character {
     this.score = 0;
     this.isGoingLeft = false;
     this.isGoingRight = false;
+    this.isGoingUp = false;
+    this.isGoingDown = false;    
     this.isDrunk = false;
     this.drunkDelta = 0;
   }
@@ -41,7 +43,12 @@ class Character {
     if (this.isGoingRight) {
       this.x += 8;
     }
-
+    if (this.isGoingUp) {
+        this.y -= 4;
+      }
+    if (this.isGoingDown) {
+        this.y += 12;
+      }
     if (this.isDrunk) {
       this.drunkDelta += 2 * (Math.random() - 0.5);
       if (this.drunkDelta > 5) this.drunkDelta = 5;
@@ -53,5 +60,8 @@ class Character {
     if (this.x - this.radius < 0) this.x = this.radius;
     if (this.x + this.radius > CANVAS_WIDTH)
       this.x = CANVAS_WIDTH - this.radius;
+    if (this.y - this.radius < 0) this.y = this.radius;
+    if (this.y + this.radius > CANVAS_HEIGHT)
+        this.y = CANVAS_HEIGHT - this.radius;
   }
 }
