@@ -167,7 +167,7 @@ function moveSlowMo() {
       setTimeout(() => {
         speedRatio *= 2;
         leprechaun.isDrunk = false;
-      }, 5000);
+      }, 10000);
     }
   }
 }
