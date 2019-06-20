@@ -9,7 +9,7 @@ class Money {
         this.img.src = "images/coin_01.png"
         this.audioClip = new Audio()
         this.audioClip.src = "cha ching.mp3"
-        this.audioClip.volume = 0.5
+        this.audioClip.volume = 0.2
         
     }
     draw(ctx) {
