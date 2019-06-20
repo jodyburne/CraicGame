@@ -193,7 +193,7 @@ function movePointSpecial() {
     pointSpecialArr[j].update();
     if (checkCollisionPointsSpecial(pointSpecialArr[j])) {
       pointSpecialArr[j].audioClip.play()
-      leprechaun.score += 4;
+      leprechaun.score += 10;
       pointSpecialArr.splice(j, 1);
     }
   }
