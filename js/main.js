@@ -21,7 +21,8 @@ homepageScreen.src = "images/horsehome.png";
 
 let bgMusic = new Audio()
 bgMusic.src = "father-ted-my-lovely-horse.mp3"
-bgMusic.volume = 0.05
+bgMusic.loop = true
+bgMusic.volume = 0.03
 bgMusic.load()
 
 
@@ -30,7 +31,7 @@ bgMusic.load()
 let screen = "home";
 let frame = 0;
 const FRAMES_BETWEEN_MONEY = 121;
-const FRAMES_BETWEEN_OBSTACLE = 189;
+const FRAMES_BETWEEN_OBSTACLE = 99;
 const FRAMES_BETWEEN_SLOWMO = 977;
 const FRAMES_BETWEEN_POINT_SPECIAL = 500;
 
