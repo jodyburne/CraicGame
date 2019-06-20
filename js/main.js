@@ -15,7 +15,7 @@ let bg = new Background();
 let leprechaun = new Character();
 
 let gameOverScreen = new Image();
-gameOverScreen.src = "images/keane1.jpg";
+gameOverScreen.src = "images/cluiche tart.png";
 let homepageScreen = new Image();
 homepageScreen.src = "images/horsehome.png";
 
@@ -225,24 +225,25 @@ function removeUselessItems() {
 
 function drawScore() {
   ctx.save();
-  ctx.font = "40px Arial bold";
-  ctx.fillStyle = "black";
-  ctx.fillText("Score: " + leprechaun.score, 600, 50);
+  ctx.font = "50px Irish Grover";
+  ctx.fillStyle = "yellowgreen";
+  ctx.fillText("Scór:", 650, 50);
+  ctx.fillText(leprechaun.score, 650, 100);
+
   ctx.restore();
 }
 
 function drawGameOver(ctx) {
   ctx.save();
   ctx.drawImage(gameOverScreen, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  ctx.font = "40px Arial bold";
-  ctx.fillStyle = "green";
-  ctx.fillText("Game Over", 200, 50);
-  ctx.fillText(
-    "You scored " + leprechaun.score + "! You're a disgrace.",
-    200,
-    100
-  );
-  ctx.fillText("Press enter to try again.", 250, 150);
+  // ctx.font = "40px Arial bold";
+  // ctx.fillStyle = "green";
+  // ctx.fillText(
+  //   "You scored " + leprechaun.score + "! You're a disgrace.",
+  //   200,
+  //   100
+  // );
+  // ctx.fillText("Press enter to try again.", 250, 150);
   ctx.restore();
 }
 
@@ -273,8 +274,7 @@ function resetGame() {
 document.onkeydown = event => {
   if (event.keyCode === 13 && (screen === "home" || screen === "over")) {
     resetGame();
-
-    console.log(screen);
+;
   }
 
   if (event.keyCode === 37) {
