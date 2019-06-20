@@ -6,6 +6,7 @@ class Character {
     this.img = new Image();
     this.img.src = "images/leprechaun.png";
     this.score = 0;
+    this.highScore = 0
     this.isGoingLeft = false;
     this.isGoingRight = false;
     this.isGoingUp = false;

@@ -226,12 +226,38 @@ function removeUselessItems() {
 function drawScore() {
   ctx.save();
   ctx.font = "50px Irish Grover";
-  ctx.fillStyle = "yellowgreen";
-  ctx.fillText("Scór:", 650, 50);
-  ctx.fillText(leprechaun.score, 650, 100);
+  ctx.fillStyle = "rgb(255,0,0)";
+  ctx.fillText("S", 640, 50);
+  ctx.fillStyle = "rgb(255,155,0)";
+  ctx.fillText("c", 680, 50);
+  ctx.fillStyle = "rgb(255, 255, 0";
+  ctx.fillText("ó", 710, 50);
+  ctx.fillStyle = "rgb(124,252,0)";
+  ctx.fillText("r:", 740, 50);
+  ctx.fillStyle = "rgb(138,43,226)"
+  ctx.fillText(leprechaun.score, 640, 100);
 
   ctx.restore();
 }
+
+// function drawHighScore() {
+//   if (leprechaun.score > leprechaun.highScore) {
+//   leprechaun.highScore = leprechaun.score
+//   ctx.save();
+//   ctx.font = "50px Irish Grover";
+//   ctx.fillStyle = "rgb(255,0,0)";
+//   ctx.fillText("S", 30, 50);
+//   ctx.fillStyle = "rgb(255,155,0)";
+//   ctx.fillText("c", 70, 50);
+//   ctx.fillStyle = "rgb(255, 255, 0)";
+//   ctx.fillText("ó", 100, 50);
+//   ctx.fillStyle = "rgb(124,252,0)";
+//   ctx.fillText("r:", 130, 50);
+//   ctx.fillStyle = "rgb(138,43,226)"
+//   ctx.fillText(leprechaun.highScore, 30, 100);
+
+//   ctx.restore();
+// }}
 
 function drawGameOver(ctx) {
   ctx.save();
@@ -244,6 +270,7 @@ function drawGameOver(ctx) {
   //   100
   // );
   // ctx.fillText("Press enter to try again.", 250, 150);
+  drawScore()
   ctx.restore();
 }
 
@@ -256,7 +283,7 @@ function drawHomepage(ctx) {
 function resetGame() {
   if (screen !== "game") {
     screen = "game";
-    bgMusic.play()
+    bgMusic.play() 
     leprechaun = new Character();
     bg = new Background();
     frame = 0;
